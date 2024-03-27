@@ -1,12 +1,8 @@
-<html lang="ja">
-        
-    <head>
-        <meta charset="utf-8">
-        <title>Densuke Shiraishi's Home page</title>
-        <meta name="author" content="白石 伝助 / Densuke Shiraishi">
-        <meta name="description" content="白石 伝助 / Densuke Shiraishi - Osaka University">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
- <script>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Densuke Shiraishi</title>
+  <script>
     MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -32,31 +28,35 @@
     dd {
       margin-left:13em;
     }
+    ol.bracket {
+      margin-left: 0em;
+    }
+    ol.bracket>li {
+      list-style-type: none;
+      counter-increment: list -1;
+      position: relative;
+    }
+    ol.bracket>li:before {
+      content: '[' counter(list) ']';
+      display: inline-block;
+      text-align: right;
+      position: absolute;
+      margin-left: -3.5em;
+      width: 3em;
+    }
   </style>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async
-	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-  <meta name="google-site-verification" content="..................................." />
-    </head>
-        
-    <body>
-        <p>
-<strong class="strong-1">Top</strong>
-&nbsp; &nbsp;
-<a href="papers.html">Papers</a>
-&nbsp; &nbsp;
-<a href="talks.html">Talks</a>
-&nbsp; &nbsp;
-<a href="cv.html">CV</a>
-</p>
-<hr style="clear:right;">
-        <header>
-            <!-- <p><small><a href="index_en.html">(english page)</a></small></p>未作成 -->
-
-       <h1>Densuke SHIRAISHI / <ruby>白石 伝助<rt>Shiraishi Densuke</rt></ruby></h1>
+  <meta name="google-site-verification" content="........................." />
+</head>
+<body>
+  <script>
+    var modified = new Date(document.lastModified);
+    var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+    document.write('<div style="text-align:right">Last updated: ' + modified.getDate()+ ' ' + month[modified.getMonth()]
+		+ ' ' + modified.getFullYear() + '</div>');
+  </script>
+  <hr>
+  <a href="img/joku-iko.jpg"><img src="img/joku-iko_s.jpg" style="float:right;width:270px;margin:0px 0px 10px 10px"></a>
+  <h1>Densuke SHIRAISHI / <ruby>白石 伝助<rt>Densuke Shiraishi</rt></ruby></h1>
 
   <p> Assistant Professor <br><br>
     <a href="https://www.tus.ac.jp/en/fac/ri2/math.html" target="_blank">Department of Mathematics,
