@@ -1,12 +1,8 @@
-<html lang="ja">
-        
-    <head>
-        <meta charset="utf-8">
-        <title>Talks - 白石 伝助 / Densuke Shiraishi</title>
-        <meta name="author" content="白石 伝助 / Densuke Shiraishi">
-        <meta name="description" content="白石 伝助 / Densuke Shiraishi - Osaka University">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
- <script>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Talks / Densuke Shiraishi</title>
+  <script>
     MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -32,18 +28,27 @@
     dd {
       margin-left:13em;
     }
+    ol.bracket {
+      margin-left: 0em;
+    }
+    ol.bracket>li {
+      list-style-type: none;
+      counter-increment: list -1;
+      position: relative;
+    }
+    ol.bracket>li:before {
+      content: '[' counter(list) ']';
+      display: inline-block;
+      text-align: right;
+      position: absolute;
+      margin-left: -3.5em;
+      width: 3em;
+    }
   </style>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async
-	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-  <meta name="google-site-verification" content="..................................." />
-    </head>
-        
-    <body>
-        <p>
+  <meta name="google-site-verification" content="........................." />
+</head>
+<body>
+<p>
 <a href="index.html">Top</a>
 &nbsp; &nbsp;
 <a href="papers.html">Papers</a>
@@ -52,10 +57,15 @@
 &nbsp; &nbsp;
 <a href="cv.html">CV</a>
 </p>
-<hr>
         <header>
-            <!-- <p><small><a href="index_en.html">(english page)</a></small></p>未作成 -->
-              <h2>Talks</h2>
+  <script>
+    var modified = new Date(document.lastModified);
+    var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+    document.write('<div style="text-align:right">Last updated: ' + modified.getDate()+ ' ' + month[modified.getMonth()]
+		+ ' ' + modified.getFullYear() + '</div>');
+  </script>
+  <hr>
+  <h2>Talks</h2>
   <ol reversed>
     <li>
       <strong>On functional equations of $\ell$-adic Galois polylogarithms</strong>.<br>
