@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Densuke SHIRAISHI (National Institute of Technology, Kagawa College)</title>
-
-  <!-- MathJax Configuration -->
+  
   <script>
     MathJax = {
       tex: {
@@ -13,7 +12,83 @@
       }
     };
   </script>
+  <!-- ポリフィルはセキュリティのため削除済 -->
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <style>
+    /* 現代的なベーススタイル */
+    body {
+      margin: 5% auto;
+      max-width: 900px; /* 大画面で横に広がりすぎないように制限 */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #333;      /* 真っ黒ではなく、目に優しいダークグレー */
+      line-height: 1.6;
+    }
+
+    /* スマートで薄い黒（グレー）の横線 */
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2em 0;
+    }
+
+    /* スマートな大きさのタイトル */
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #2c3e50;
+      letter-spacing: 0.02em;
+      margin-top: 0.5em;
+    }
+
+    /* リンクの装飾 */
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 上部ナビゲーション */
+    .top-nav {
+      margin-bottom: 1em;
+    }
+    .top-nav a, .top-nav strong {
+      margin-right: 1.5em;
+    }
+
+    /* 記述リスト（dl, dt, dd）のレイアウト調整 */
+    dt {
+      float: left;
+      clear: left;
+      width: 13em;
+      font-weight: 600;
+    }
+    dd {
+      margin-left: 13em;
+      margin-bottom: 1em; /* 項目間に少し余白を追加 */
+    }
+
+    /* 番号付きリスト（論文等の表記用） */
+    ol.bracket {
+      margin-left: 0em;
+    }
+    ol.bracket > li {
+      list-style-type: none;
+      counter-increment: list -1;
+      position: relative;
+    }
+    ol.bracket > li:before {
+      content: '[' counter(list) ']';
+      display: inline-block;
+      text-align: right;
+      position: absolute;
+      margin-left: -3.5em;
+      width: 3em;
+      color: #666;
+    }
+  </style>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P44E5Y4CMP"></script>
@@ -23,215 +98,60 @@
     gtag('js', new Date());
     gtag('config', 'G-P44E5Y4CMP');
   </script>
-
   <meta name="google-site-verification" content="m15ayT3VTWOJRptOMTsQMEzNETNq7A43aAFG9iLWLUs" />
-
-  <style>
-    /* 全体の色設定 */
-    :root {
-      --primary-color: #2c3e50;
-      --link-color: #0366d6;
-      --bg-color: #f0f2f5;
-      --text-color: #333333;
-      --container-bg: #ffffff;
-    }
-
-    /* ベースのタイポグラフィと背景 */
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      background-color: var(--bg-color);
-      margin: 0;
-      padding: 20px;
-    }
-
-    /* 中央寄せのメインコンテナ */
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: var(--container-bg);
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    /* ナビゲーションメニュー */
-    nav {
-      display: flex;
-      gap: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #eaeaea;
-      margin-bottom: 30px;
-      font-size: 1.1em;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--link-color);
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    nav .active {
-      font-weight: bold;
-      color: var(--primary-color);
-    }
-
-    /* ヘッダー周り */
-    .update-date {
-      text-align: right;
-      font-size: 0.9em;
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      color: var(--primary-color);
-      margin-top: 0;
-      font-size: 2em;
-      border-bottom: 2px solid var(--primary-color);
-      padding-bottom: 10px;
-    }
-
-    /* プロフィール情報 */
-    .profile-info {
-      font-size: 1.05em;
-      margin-bottom: 35px;
-    }
-
-    .profile-info a {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-
-    /* 研究情報のリスト（Gridレイアウトで綺麗に整列） */
-    dl {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 15px;
-      align-items: baseline;
-      background-color: #f8f9fa;
-      padding: 25px;
-      border-radius: 6px;
-    }
-
-    dt {
-      font-weight: bold;
-      color: var(--primary-color);
-      margin: 0;
-      width: auto;
-      float: none;
-    }
-
-    dd {
-      margin: 0;
-    }
-
-    /* その他のリンク等のリストスタイル */
-    ul.bullet-list {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    ul.bullet-list li {
-      margin-bottom: 6px;
-      position: relative;
-      padding-left: 15px;
-    }
-
-    ul.bullet-list li::before {
-      content: "•";
-      color: var(--primary-color);
-      position: absolute;
-      left: 0;
-    }
-
-    /* スマホ向けレスポンシブ対応 */
-    @media (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-      dl {
-        grid-template-columns: 1fr;
-        gap: 5px;
-      }
-      dt {
-        margin-top: 15px;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-    }
-  </style>
 </head>
-<body>
 
-<div class="container">
-  <!-- ナビゲーション -->
-  <nav>
-    <span class="active">Top</span>
+<body>
+  <div class="top-nav">
+    <strong class="strong-1">Top</strong>
     <a href="papers.html">Papers</a>
     <a href="talks.html">Talks</a>
     <a href="cv.html">CV</a>
-  </nav>
+  </div>
+
+  <div style="text-align:right; font-size: 0.9em; color: #666;">
+    <script>
+      var modified = new Date(document.lastModified);
+      var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+      document.write('Last updated: ' + modified.getDate() + ' ' + month[modified.getMonth()] + ' ' + modified.getFullYear());
+    </script>
+  </div>
+
+  <hr> 
 
   <header>
-    <!-- 最終更新日 -->
-    <div class="update-date" id="last-updated-date"></div>
-    
     <h1>Densuke SHIRAISHI's Homepage</h1>
   </header>
-
+  
   <main>
-    <!-- 所属・連絡先 -->
-    <div class="profile-info">
-      <p>
-        <strong>Assistant Professor</strong><br><br>
-        <a href="https://www.kagawa-nct.ac.jp/abroad/" target="_blank">National Institute of Technology, Kagawa College</a>.<br>
-        355 Chokushi-cho, Takamatsu, Kagawa 761-8058 Japan.
-      </p>
-      <p>
-        <strong>E-mail:</strong> densuke.shiraishi[at]gmail.com, shiraishi-d[at]t.kagawa-nct.ac.jp
-      </p>
-    </div>
+    <p>
+      Assistant Professor <br><br>
+      <a href="https://www.kagawa-nct.ac.jp/abroad/" target="_blank">National Institute of Technology, Kagawa College</a>.<br>
+      355 Chokushi-cho, Takamatsu, Kagawa 761-8058 Japan.
+    </p>  
+    <p>
+      <strong>E-mail</strong>: densuke.shiraishi[at]gmail.com, shiraishi-d[at]t.kagawa-nct.ac.jp
+    </p>  
 
-    <!-- 研究情報 -->
     <dl>
       <dt>Research interests:</dt>
       <dd>Number theory, Arithmetic geometry.</dd>
-
+      
       <dt>Keywords:</dt>
       <dd>Arithmetic fundamental group, $\ell$-adic Galois polylogarithm, <br>Galois actions on fundamental group(oid)s.</dd>
-
+      
       <dt>My other websites:</dt>
-      <dd>
-        <ul class="bullet-list">
-          <li><a href="https://researchmap.jp/densuke_SHIRAISHI" target="_blank">My profile in Researchmap</a></li>
-          <li><a href="https://scholar.google.com/citations?user=xeQYEg0AAAAJ" target="_blank">My profile in Google Scholar</a></li>
-        </ul>
-      </dd>
-
+      <dd>$\bullet~$<a href="https://researchmap.jp/densuke_SHIRAISHI" target="_blank">My profile in Researchmap</a></dd>
+      <dd>$\bullet~$<a href="https://scholar.google.com/citations?user=xeQYEg0AAAAJ" target="_blank">My profile in Google Scholar</a></dd>
+      
       <dt>Links:</dt>
-      <dd>
-        <ul class="bullet-list">
-          <li><a href="https://ahgt.math.cnrs.fr/" target="_blank">LPP-RIMS Arithmetic & Homotopic Galois Theory IRN</a></li>
-        </ul>
-      </dd>
+      <dd>$\bullet~$<a href="https://ahgt.math.cnrs.fr/" target="_blank">LPP-RIMS Arithmetic & Homotopic Galois Theory IRN</a></dd>
     </dl>
   </main>
-</div>
 
-<!-- 最終更新日を自動取得するスクリプト -->
-<script>
-  const modified = new Date(document.lastModified);
-  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-  document.getElementById('last-updated-date').innerText = 'Last updated: ' + modified.getDate() + ' ' + months[modified.getMonth()] + ' ' + modified.getFullYear();
-</script>
+  <hr style="clear:both;">        
 
-</body>
+  <footer>                 
+  </footer>            
+</body>        
 </html>
