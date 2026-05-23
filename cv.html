@@ -1,7 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV of Densuke SHIRAISHI</title>
+  
   <script>
     MathJax = {
       tex: {
@@ -9,146 +12,233 @@
       }
     };
   </script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <!-- ポリフィルはセキュリティのため削除済 -->
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
   <style>
     body {
-      margin:5%;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #fff;
+    }
+    .container {
+      padding: 3% 5%;
     }
     hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, white, black, white);
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2em 0;
     }
-    dt {
-      float:left;
-      clear:left;
-      width:13em;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2c3e50;
+      letter-spacing: 0.02em;
+      margin-top: 1.5em;
+      margin-bottom: 1em;
     }
-    dd {
-      margin-left:13em;
+    a {
+      color: #1a5fb4;
+      text-decoration: none;
     }
-    ol.bracket {
-      margin-left: 0em;
+    a:hover {
+      text-decoration: underline;
     }
-    ol.bracket>li {
-      list-style-type: none;
-      counter-increment: list -1;
-      position: relative;
+    .top-nav {
+      margin-bottom: 2em;
     }
-    ol.bracket>li:before {
-      content: '[' counter(list) ']';
-      display: inline-block;
+    .top-nav a, .top-nav strong {
+      margin-right: 2.5em;
+    }
+    .last-updated {
       text-align: right;
-      position: absolute;
-      margin-left: -3.5em;
-      width: 3em;
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 1em;
+    }
+    ol {
+      padding-left: 1.5em;
+      margin: 1em 0;
+    }
+    li {
+      margin-bottom: 1.2em;
+    }
+    
+    /* 職歴・研究滞在等向けのタイムラインスタイル */
+    .cv-dl {
+      margin: 1.5em 0;
+    }
+    .cv-dl dt {
+      float: left;
+      clear: left;
+      width: 15em;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 1.2em;
+    }
+    .cv-dl dd {
+      margin-left: 15em;
+      margin-bottom: 1.2em;
+    }
+    .cv-dl dd + dd {
+      margin-top: -0.8em; /* 同一期間内の複数行の隙間を縮める */
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    footer {
+      font-size: 0.85em;
+      color: #777;
+      margin-top: 3em;
+    }
+
+    @media (max-width: 768px) {
+      .cv-dl dt {
+        float: none;
+        width: auto;
+        margin-bottom: 0.2em;
+        color: #2c3e50;
+      }
+      .cv-dl dd {
+        margin-left: 0;
+        margin-bottom: 1.5em;
+      }
+      .cv-dl dd + dd {
+        margin-top: 0;
+      }
     }
   </style>
-<meta name="google-site-verification" content="m15ayT3VTWOJRptOMTsQMEzNETNq7A43aAFG9iLWLUs" />
+  <meta name="google-site-verification" content="m15ayT3VTWOJRptOMTsQMEzNETNq7A43aAFG9iLWLUs" />
 </head>
 <body>
-<p>
-<a href="index.html">Top</a>
-&nbsp; &nbsp;
-<a href="papers.html">Papers</a>
-&nbsp; &nbsp;
-<a href="talks.html">Talks</a>
-&nbsp; &nbsp;
-<strong class="strong-1">CV</strong>
-</p>
-        <header>
-  <script>
-    var modified = new Date(document.lastModified);
-    var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
-    document.write('<div style="text-align:right">Last updated: ' + modified.getDate()+ ' ' + month[modified.getMonth()]
-		+ ' ' + modified.getFullYear() + '</div>');
-  </script>
-  <hr>
-  <h2>Biography</h2>
-  <ol reversed>
-    Nationality: Japan / Birthplace: Takamatsu City, Kagawa  </ol>
-        <hr>       
+  <div class="container clearfix">
+    <div class="top-nav">
+      <a href="index.html">Top</a>
+      <a href="papers.html">Papers</a>
+      <a href="talks.html">Talks</a>
+      <strong class="strong-1">CV</strong>
+    </div>
 
-       <h2>Degree</h2>
-  <ol reversed>
-    <li>
-      <strong>Doctor of Philosophy (Science)</strong>              
-              Osaka University，March 2024.<br>
-    </li>
-    <li>
-      <strong>Master of Science</strong>
-              Osaka University，March 2019.<br>
-    </li>
-    <li>
-      <strong>Bachelor of Science</strong>
-              Tokyo University of Science，March 2017.<br>
-    </li>
-  </ol>
-        <hr>
-<h2>Employment / Fellowships</h2>
-  <ol reversed>
-	<dt>April 2026–present</dt>
-      <dd><strong>Assistant Professor</strong></dd>
-      <dd>Department of General Education, National Institute of Technology, Kagawa College.</dd><br>
-    <dt>April 2024–March 2026</dt>
-      <dd><strong>Assistant Professor</strong></dd>
-      <dd>Department of Mathematics, Faculty of Science Division II, Tokyo University of Science.</dd><br>
-	<dt>April 2025–Jun 2025</dt>
-      <dd><strong>Part-time lecturer</strong></dd>
-      <dd>Basic Science and Technology Courses (Mathematics) Implementation Committee, Institute of Science Tokyo.</dd><br>
-    <dt>April 2020–September 2022</dt>
-      <dd><strong>JSPS Research Fellowship for Young Scientists, DC2</strong></dd>
-      <dd>Japan Society for the Promotion of Science.</dd>
-      <dd>Host research institution: Graduate School of Science, Osaka University.</dd><br>
-    <dt>August 2019–March 2020</dt>
-      <dd><strong>Research Assistant</strong></dd>
-      <dd>Graduate School of Science, Osaka University</dd>
-  </ol>
-        <hr>
-<h2>Academic Visits</h2>
-  <ol reversed>
-    <dt>November 3, 2025–December 20, 2025</dt>
-      <dd><strong>Visitor</strong></dd>
-      <dd>Institut de mathématiques de Jussieu – Paris Rive Gauche, France</dd>
-  </ol>
-        <hr>
-<h2>Grants</h2>
-  <ol reversed>
-	<li>
-      <strong>Grants-in-Aid for Scientific Research - Grant-in-Aid for Early-Career Scientists</strong>
-      <br>Project Title：<strong>Arithmetic Study of Galois Actions on Fundamental Groups</strong>,
-      <br>Project Number：26K16966.
-    </li><br>
-    <li>
-      <strong>Grants-in-Aid for Scientific Research - Grant-in-Aid for Research Activity Start-up</strong>
-      <br>Project Title：<strong>Special Functions Inherent in Arithmetic Fundamental Groups</strong>,
-      <br>Project Number：24K22840.
-    </li><br>
-    <li>
-      <strong>Grants-in-Aid for Scientific Research - JSPS Fellows (DC2)</strong>
-      <br>Project Title：<strong>Galois Actions on Fundamental Groups and Number Theory</strong>,
-      <br>Project Number：20J11018.
-    </li>
-  </ol>
-        <hr>
-<h2>Organizer</h2>
-  <ol reversed>
-	<li>
-      <strong>Low dimensional topology and number theory XVII </strong>, Mar. 16th - 19th, 2026.<br>
-      with Hisatoshi Kodani, Masanori Morishita, Hiroaki Nakamura, Jun Ueki．
-    </li><br>
-    <li>
-      <strong>Mathsci Freshman Seminar 2020</strong>, Feb. 7th - 11th, 2020.<br>
-      with Yasuaki Gyoda (chief), Hiroshi Ishimoto, Keita Goto, Taro Sogabe, JuAe Song, Taiki Takatsu, Shogo Fujiwara, Akiko Yazawa, and Koji Yamazaki．
-    </li>
-  </ol>
-        <hr>
-        
-        <footer>
-           
-        </footer>
-        
-    </body>
-        
+    <div class="last-updated">
+      <script>
+        var modified = new Date(document.lastModified);
+        var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+        document.write('Last updated: ' + modified.getDate() + ' ' + month[modified.getMonth()] + ' ' + modified.getFullYear());
+      </script>
+    </div>
+
+    <hr>
+
+    <section>
+      <h2>Biography</h2>
+      <p>
+        <strong>Nationality:</strong> Japan &nbsp;/&nbsp; <strong>Birthplace:</strong> Takamatsu City, Kagawa
+      </p>
+    </section>
+
+    <hr>       
+       
+    <section>
+      <h2>Degree</h2>
+      <ol reversed>
+        <li>
+          <strong>Doctor of Philosophy (Science)</strong> &mdash; Osaka University，March 2024.
+        </li>
+        <li>
+          <strong>Master of Science</strong> &mdash; Osaka University，March 2019.
+        </li>
+        <li>
+          <strong>Bachelor of Science</strong> &mdash; Tokyo University of Science，March 2017.
+        </li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Employment / Fellowships</h2>
+      <dl class="cv-dl">
+        <dt>April 2026&ndash;present</dt>
+        <dd><strong>Assistant Professor</strong></dd>
+        <dd>Department of General Education, National Institute of Technology, Kagawa College.</dd>
+
+        <dt>April 2024&ndash;March 2026</dt>
+        <dd><strong>Assistant Professor</strong></dd>
+        <dd>Department of Mathematics, Faculty of Science Division II, Tokyo University of Science.</dd>
+
+        <dt>April 2025&ndash;June 2025</dt>
+        <dd><strong>Part-time lecturer</strong></dd>
+        <dd>Basic Science and Technology Courses (Mathematics) Implementation Committee, Institute of Science Tokyo.</dd>
+
+        <dt>April 2020&ndash;September 2022</dt>
+        <dd><strong>JSPS Research Fellowship for Young Scientists, DC2</strong></dd>
+        <dd>Japan Society for the Promotion of Science.</dd>
+        <dd>Host research institution: Graduate School of Science, Osaka University.</dd>
+
+        <dt>August 2019&ndash;March 2020</dt>
+        <dd><strong>Research Assistant</strong></dd>
+        <dd>Graduate School of Science, Osaka University.</dd>
+      </dl>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Academic Visits</h2>
+      <dl class="cv-dl">
+        <dt>November 3, 2025&ndash;December 20, 2025</dt>
+        <dd><strong>Visitor</strong></dd>
+        <dd>Institut de mathématiques de Jussieu &ndash; Paris Rive Gauche, France</dd>
+      </dl>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Grants</h2>
+      <ol reversed>
+        <li>
+          <strong>Grants-in-Aid for Scientific Research - Grant-in-Aid for Early-Career Scientists</strong><br>
+          Project Title：<strong>Arithmetic Study of Galois Actions on Fundamental Groups</strong>,<br>
+          Project Number：26K16966.
+        </li>
+        <li>
+          <strong>Grants-in-Aid for Scientific Research - Grant-in-Aid for Research Activity Start-up</strong><br>
+          Project Title：<strong>Special Functions Inherent in Arithmetic Fundamental Groups</strong>,<br>
+          Project Number：24K22840.
+        </li>
+        <li>
+          <strong>Grants-in-Aid for Scientific Research - JSPS Fellows (DC2)</strong><br>
+          Project Title：<strong>Galois Actions on Fundamental Groups and Number Theory</strong>,<br>
+          Project Number：20J11018.
+        </li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Organizer</h2>
+      <ol reversed>
+        <li>
+          <strong>Low dimensional topology and number theory XVII</strong>, Mar. 16th - 19th, 2026.<br>
+          with Hisatoshi Kodani, Masanori Morishita, Hiroaki Nakamura, Jun Ueki．
+        </li>
+        <li>
+          <strong>Mathsci Freshman Seminar 2020</strong>, Feb. 7th - 11th, 2020.<br>
+          with Yasuaki Gyoda (chief), Hiroshi Ishimoto, Keita Goto, Taro Sogabe, JuAe Song, Taiki Takatsu, Shogo Fujiwara, Akiko Yazawa, and Koji Yamazaki．
+        </li>
+      </ol>
+    </section>
+
+    <hr>
+    <footer>
+    </footer>
+  </div>
+</body>
 </html>
