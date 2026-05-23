@@ -1,7 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Densuke SHIRAISHI (National Institute of Technology, Kagawa College)</title>
+  
   <script>
     MathJax = {
       tex: {
@@ -9,96 +11,184 @@
       }
     };
   </script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <!-- ポリフィルはセキュリティのため削除済 -->
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
   <style>
+    /* 現代的なベーススタイル */
     body {
-      margin:5%;
+      margin: 0; /* デフォルトのマージンを削除 */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #333;      /* 真っ黒ではなく、目に優しいダークグレー */
+      line-height: 1.6;
+      background-color: #fff;
     }
+
+    /* コンテンツ全体を包むコンテナ */
+    .container {
+      padding: 3% 5%; /* 適切なパディングを設定 */
+    }
+
+    /* スマートで薄い黒（グレー）の横線 */
     hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, white, black, white);
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2em 0;
     }
+
+    /* スマートな大きさのタイトル */
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600; /* 少し太く */
+      color: #2c3e50;
+      letter-spacing: 0.02em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em; /* 下部の余白を調整 */
+    }
+
+    /* リンクの装飾 */
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 上部ナビゲーション */
+    .top-nav {
+      margin-bottom: 2em; /* 下部の余白を広く */
+    }
+    .top-nav a, .top-nav strong {
+      margin-right: 2.5em; /* リンク間の余白を広く */
+    }
+
+    /* 更新日時 */
+    .last-updated {
+      text-align: right;
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 1em;
+    }
+
+    /* ヘッダーセクション */
+    header {
+      margin-bottom: 2em;
+    }
+
+    /* メインコンテンツセクション */
+    main {
+      margin-bottom: 3em;
+    }
+
+    /* 段落の余白調整 */
+    p {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    /* 記述リスト（dl, dt, dd）のレイアウト調整 */
     dt {
-      float:left;
-      clear:left;
-      width:13em;
+      float: left;
+      clear: left;
+      width: 13em;
+      font-weight: 600;
     }
     dd {
-      margin-left:13em;
+      margin-left: 13em;
+      margin-bottom: 1em; /* 項目間に少し余白を追加 */
     }
+
+    /* 番号付きリスト（論文等の表記用） */
     ol.bracket {
       margin-left: 0em;
     }
-    ol.bracket>li {
+    ol.bracket > li {
       list-style-type: none;
       counter-increment: list -1;
       position: relative;
     }
-    ol.bracket>li:before {
+    ol.bracket > li:before {
       content: '[' counter(list) ']';
       display: inline-block;
       text-align: right;
       position: absolute;
       margin-left: -3.5em;
       width: 3em;
+      color: #666;
+    }
+
+    /* フッター */
+    footer {
+      padding: 2em 5%;
+      border-top: 1px solid #ddd;
     }
   </style>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P44E5Y4CMP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-P44E5Y4CMP');
-</script>
-	<meta name="google-site-verification" content="m15ayT3VTWOJRptOMTsQMEzNETNq7A43aAFG9iLWLUs" />
-</head>
-<body>
-<p>
-<strong class="strong-1">Top</strong>
-&nbsp; &nbsp;
-<a href="papers.html">Papers</a>
-&nbsp; &nbsp;
-<a href="talks.html">Talks</a>
-&nbsp; &nbsp;
-<a href="cv.html">CV</a>
-</p>
-        <header>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P44E5Y4CMP"></script>
   <script>
-    var modified = new Date(document.lastModified);
-    var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
-    document.write('<div style="text-align:right">Last updated: ' + modified.getDate()+ ' ' + month[modified.getMonth()]
-		+ ' ' + modified.getFullYear() + '</div>');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P44E5Y4CMP');
   </script>
-  <hr>
- <h1>Densuke SHIRAISHI's Homepage</h1>
+  <meta name="google-site-verification" content="m15ayT3VTWOJRptOMTsQMEzNETNq7A43aAFG9iLWLUs" />
+</head>
 
-  <p> Assistant Professor <br><br>
-    <a href="https://www.kagawa-nct.ac.jp/abroad/" target="_blank">
-     National Institute of Technology, Kagawa College</a>.<br>
-     355 Chokushi-cho, Takamatsu, Kagawa 761-8058 Japan.</p>
-  <p><br>
-    <strong>E-mail</strong>: densuke.shiraishi[at]gmail.com,$~~$ shiraishi-d[at]t.kagawa-nct.ac.jp</p>
-  <dl>
-    <dt><strong>Research interests</strong>:</dt>
-      <dd>Number theory,&nbsp; Arithmetic geometry.</dd><br>
-    <dt><strong>Keywords</strong>:</dt>
-      <dd>Arithmetic fundamental group,&nbsp; $\ell$-adic Galois polylogarithm,&nbsp; <br>Galois actions on fundamental group(oid)s.</dd><br>
-    <dt><strong>My other websites</strong>:</dt>
-      <dd>$\bullet~$<a href="https://researchmap.jp/densuke_SHIRAISHI" target="_blank">My profile in Researchmap</a></dd>
-      <dd>$\bullet~$<a href="https://scholar.google.com/citations?user=xeQYEg0AAAAJ" target="_blank">My profile in Google Scholar</a></dd><br>
-    <dt><strong>Links</strong>:</dt>
-      <dd>$\bullet~$<a href="https://ahgt.math.cnrs.fr/" target="_blank">LPP-RIMS Arithmetic & Homotopic Galois Theory IRN</a></dd>
-  </dl>
-  </p>
-<hr style="clear:right;">
-        <footer>
-         
-        </footer>
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <strong class="strong-1">Top</strong>
+      <a href="papers.html">Papers</a>
+      <a href="talks.html">Talks</a>
+      <a href="cv.html">CV</a>
+    </div>
+
+    <div class="last-updated">
+      <script>
+        var modified = new Date(document.lastModified);
+        var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+        document.write('Last updated: ' + modified.getDate() + ' ' + month[modified.getMonth()] + ' ' + modified.getFullYear());
+      </script>
+    </div>
+
+    <hr> 
+
+    <header>
+      <h1>Densuke SHIRAISHI's Homepage</h1>
+    </header>
+    
+    <main>
+      <p>
+        Assistant Professor <br><br>
+        <a href="https://www.kagawa-nct.ac.jp/abroad/" target="_blank">National Institute of Technology, Kagawa College</a>.<br>
+        355 Chokushi-cho, Takamatsu, Kagawa 761-8058 Japan.
+      </p>  
+      <p>
+        <strong>E-mail</strong>: densuke.shiraishi[at]gmail.com, shiraishi-d[at]t.kagawa-nct.ac.jp
+      </p>  
+
+      <dl>
+        <dt>Research interests:</dt>
+        <dd>Number theory, Arithmetic geometry.</dd>
         
-    </body>
+        <dt>Keywords:</dt>
+        <dd>Arithmetic fundamental group, $\ell$-adic Galois polylogarithm, <br>Galois actions on fundamental group(oid)s.</dd>
         
+        <dt>My other websites:</dt>
+        <dd>$\bullet~$<a href="https://researchmap.jp/densuke_SHIRAISHI" target="_blank">My profile in Researchmap</a></dd>
+        <dd>$\bullet~$<a href="https://scholar.google.com/citations?user=xeQYEg0AAAAJ" target="_blank">My profile in Google Scholar</a></dd>
+        
+        <dt>Links:</dt>
+        <dd>$\bullet~$<a href="https://ahgt.math.cnrs.fr/" target="_blank">LPP-RIMS Arithmetic & Homotopic Galois Theory IRN</a></dd>
+      </dl>
+    </main>
+
+    <hr style="clear:both;">        
+  </div>
+
+  <footer>                 
+  </footer>            
+</body>        
 </html>
