@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Densuke SHIRAISHI (National Institute of Technology, Kagawa College)</title>
   
   <script>
@@ -15,11 +16,9 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   
   <style>
-    /* 現代的なベーススタイル */
+    /* 元のフォント環境を活かしたベーススタイル */
     body {
       margin: 0; /* デフォルトのマージンを削除 */
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      color: #333;      /* 真っ黒ではなく、目に優しいダークグレー */
       line-height: 1.6;
       background-color: #fff;
     }
@@ -39,16 +38,14 @@
     /* スマートな大きさのタイトル */
     h1 {
       font-size: 1.8rem;
-      font-weight: 600; /* 少し太く */
-      color: #2c3e50;
+      font-weight: 600;
       letter-spacing: 0.02em;
       margin-top: 0.5em;
       margin-bottom: 0.5em; /* 下部の余白を調整 */
     }
 
-    /* リンクの装飾 */
+    /* リンクの装飾（色はブラウザデフォルトを維持） */
     a {
-      color: #0056b3;
       text-decoration: none;
     }
     a:hover {
@@ -118,10 +115,9 @@
       color: #666;
     }
 
-    /* フッター */
+    /* フッター（長い上線ボーダーを削除） */
     footer {
-      padding: 2em 5%;
-      border-top: 1px solid #ddd;
+      padding: 2em 0;
     }
   </style>
 
@@ -190,5 +186,5 @@
 
   <footer>                 
   </footer>            
-</body>        
+</body>
 </html>
